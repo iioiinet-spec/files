@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCM Management System Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-indigo-600 text-white p-2 rounded-lg flex items-center justify-center shadow-md shadow-indigo-100">
+                    <i class="fa-solid fa-layer-group text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-slate-900 tracking-tight">SCM System</h1>
+                    <p class="text-xs text-slate-500">Workspace Dashboard</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="http://iioiinet-spec.github.io/files/Code.gs" target="_blank" class="text-sm font-medium text-slate-600 hover:text-indigo-600 transition flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-md">
+                    <i class="fa-solid fa-code text-xs"></i> GAS Code
+                </a>
+                <span class="h-4 w-px bg-slate-300"></span>
+                <div class="flex items-center gap-2">
+                    <span class="inline-block w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></span>
+                    <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded-md">System Online</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        
+        <section class="mb-10">
+            <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-950 rounded-2xl p-6 md:p-8 shadow-xl text-white relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 text-white/5 text-9xl font-bold select-none pointer-events-none">
+                    SCM
+                </div>
+                <div class="relative z-10 max-w-2xl">
+                    <span class="bg-indigo-500/20 text-indigo-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-indigo-500/30">통합 관리 시스템</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mt-3 mb-2 tracking-tight">효율적인 일정 및 할 일 관리 플랫폼</h2>
+                    <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+                        Google Apps Script 연동 데이터 기반의 스마트 스케줄러와 체크리스트 시스템입니다. 업무 효율성을 극대화하기 위한 전용 워크스페이스 공간입니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            
+            <div class="bg-white border border-slate-200 rounded-xl shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+                <div class="p-6">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-200">
+                        <i class="fa-solid fa-window-restore text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">SCM 메인 웹/앱</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        SCM 관리 시스템의 메인 인프라 및 핵심 데이터 명세 파일이 위치한 기본 원격 저장소 링크입니다.
+                    </p>
+                </div>
+                <div class="p-6 bg-slate-50 border-t border-slate-100 rounded-b-xl">
+                    <a href="http://iioiinet-spec.github.io/files/" target="_blank" class="w-full inline-flex items-center justify-center px-4 py-2 bg-white border border-slate-300 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600 hover:border-blue-400 transition-all shadow-xs gap-2">
+                        <span>서비스 접속하기</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-xl shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+                <div class="p-6">
+                    <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center mb-5 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-200">
+                        <i class="fa-solid fa-calendar-days text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">캘린더 스케줄러</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        강의 일정, 연구소 프로젝트 마감일 및 주요 행사 일정을 직관적으로 모니터링하고 관리할 수 있는 타임라인 캘린더입니다.
+                    </p>
+                </div>
+                <div class="p-6 bg-slate-50 border-t border-slate-100 rounded-b-xl">
+                    <a href="http://iioiinet-spec.github.io/files/calendar-scheduler.html" target="_blank" class="w-full inline-flex items-center justify-center px-4 py-2 bg-white border border-slate-300 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-amber-600 hover:border-amber-400 transition-all shadow-xs gap-2">
+                        <span>스케줄러 열기</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-xl shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+                <div class="p-6">
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center mb-5 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-200">
+                        <i class="fa-solid fa-list-check text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">할 일 목록 (To-Do)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        오늘 진행해야 할 강의 준비물 확인, 학생 피드백 및 행정 업무 우선순위를 체크하고 관리하는 실시간 테스크 목록입니다.
+                    </p>
+                </div>
+                <div class="p-6 bg-slate-50 border-t border-slate-100 rounded-b-xl">
+                    <a href="http://iioiinet-spec.github.io/files/todo-checklist.html" target="_blank" class="w-full inline-flex items-center justify-center px-4 py-2 bg-white border border-slate-300 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-emerald-600 hover:border-emerald-400 transition-all shadow-xs gap-2">
+                        <span>체크리스트 열기</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-xs">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div class="flex items-start gap-4">
+                    <div class="bg-slate-100 text-slate-700 p-3 rounded-lg flex items-center justify-center mt-1">
+                        <i class="fa-solid fa-database text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Google Apps Script 백엔드 저장소</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed max-w-3xl">
+                            본 SCM 시스템은 Google Spreadsheet 데이터를 백엔드로 삼아 API 통신을 수행합니다. 시스템 데이터 동기화 알고리즘 및 API 통신 로직이 포함된 소스 코드(<code class="bg-slate-100 text-rose-600 px-1.5 py-0.5 rounded text-xs font-mono">Code.gs</code>) 원본을 열람할 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="shrink-0">
+                    <a href="http://iioiinet-spec.github.io/files/Code.gs" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white rounded-lg text-sm font-medium hover:bg-slate-800 transition shadow-xs">
+                        <i class="fa-brands fa-google"></i>
+                        <span>Apps Script 코드 확인</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+            <div>
+                &copy; 2026 SCM System. All rights reserved.
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1"><i class="fa-solid fa-code-branch text-xs"></i> v1.0.0</span>
+                <span class="h-3 w-px bg-slate-200"></span>
+                <span class="flex items-center gap-1"><i class="fa-solid fa-shield-halved text-xs"></i> Secure Workspace</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
